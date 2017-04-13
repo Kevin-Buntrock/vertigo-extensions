@@ -19,6 +19,7 @@
 package io.vertigo.x.impl.notification;
 
 import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 
 import javax.inject.Inject;
@@ -53,8 +54,16 @@ public final class NotificationManagerImpl implements NotificationManager {
 
 	/** {@inheritDoc} */
 	@Override
+	@Deprecated
 	public void send(final Notification notification, final URI<AccountGroup> groupURI) {
 		final NotificationEvent notificationEvent = new NotificationEvent(notification, accountManager.getStore().getAccountURIs(groupURI));
+		notificationsPlugin.send(notificationEvent);
+	}
+
+	/** {@inheritDoc} */
+	@Override
+	public void send(final Notification notification, final Set<URI<Account>> accountURIs) {
+		final NotificationEvent notificationEvent = new NotificationEvent(notification, accountURIs);
 		notificationsPlugin.send(notificationEvent);
 	}
 

@@ -10,12 +10,13 @@
 	<artifactId>vertigo-x-notification</artifactId>
 	<packaging>jar</packaging>
 	<name>vertigo-x-notification</name>
+	<version>0.9.2a</version>
 
 	<dependencies>
 		<dependency>
 		    <groupId>io.vertigo</groupId>
 			<artifactId>vertigo-x-account</artifactId>
-			<version>${project.version}</version>
+			<version>${vertigo.version}</version>
 		</dependency>
 		
 		<dependency>
