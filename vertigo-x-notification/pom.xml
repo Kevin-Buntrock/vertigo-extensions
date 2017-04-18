@@ -74,5 +74,13 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
+	
+	<distributionManagement>
+	  <repository>
+	     <id>klee-nexus</id>
+	     <name>KleeGoup nexus Snapshots</name>
+	     <url>http://kleegroup-nexus:8080/nexus/content/repositories/releases/</url>
+	  </repository>
+	</distributionManagement>
 
 </project>
